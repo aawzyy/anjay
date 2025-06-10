@@ -90,7 +90,11 @@ const BirthdayPage = () => {
 
       {/* Bagian 1: Hero Section */}
       <motion.div style={styles.hero}>
-        <div style={styles.heroOverlay}></div>
+        <motion.div
+          style={styles.heroOverlay}
+          animate={{ opacity: isHeroTextVisible ? 1 : 0 }}
+          transition={{ duration: 2, ease: "easeOut" }} // Animasi fade-out selama 2 detik
+        ></motion.div>
         <video src="/hero-bg.mp4" autoPlay loop style={styles.heroVideo}></video>
         <motion.div
           variants={containerVariants}
