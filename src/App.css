@@ -1,0 +1,34 @@
+.App {
+  text-align: center;
+}
+
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 9999;
+  transition: opacity 0.5s ease-out;
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Memastikan video menutupi seluruh layar */
+}
+
+/* Animasi untuk video dan konten */
+.fade-out {
+  opacity: 0;
+}
+
+.main-content {
+  opacity: 0;
+  transition: opacity 0.8s ease-in;
+}
+
+.fade-in {
+  opacity: 1;
+}
